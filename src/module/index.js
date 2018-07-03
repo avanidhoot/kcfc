@@ -1,4 +1,4 @@
 import ERI from './ERI';
 import RI from './RI'
-
-export { ERI, RI }
+import CR from './CR';
+export { ERI, RI, CR }

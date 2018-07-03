@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const Sidebars = (props) => {
+
     return (
         <Sidebar.Pushable as={Segment} >
             <Sidebar
@@ -15,7 +16,7 @@ const Sidebars = (props) => {
                 vertical
                 visible={true}
                 width=''>
-                <Link to="home">                
+                <Link to="/">
                     <Menu.Item as='a'>
                         <Icon name='home' />
                         Client Requirement
