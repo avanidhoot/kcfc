@@ -17,7 +17,6 @@ const Sidebars = (props) => {
                 width=''>
                 <Link to="home">                
                     <Menu.Item as='a'>
-                        <Icon name='home' />
                         Client Requirement
                     </Menu.Item>
                 </Link>
