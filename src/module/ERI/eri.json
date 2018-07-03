@@ -1,0 +1,28 @@
+{
+   "ERI":[
+        {"title":"Payroll Policies","link":"http://192.168.1.206/Documents/AdditionalInfo/KT-DSR_Payroll%20policies.docx"},
+        {"title":"Employee Access Setup Link","link":"https://helpdesk.katalysttech.com/support/catalog/items/43"},
+        {"title":"Employee Exit Setup Link","link":"https://helpdesk.katalysttech.com/support/catalog/items/57"},
+        {"title":"NewHire Buddy Questionnaire","link":"http://192.168.1.206/Documents/Recruiting_Templates/Katalyst%20Employee%20Relevant%20Information/NewHire Buddy Questionaire.docx"},
+        {"title":"Team alignment and Contact info","link":"http://192.168.1.206/Documents/Recruiting_Templates/Katalyst%20Employee%20Relevant%20Information/NHO org chart _ Team Alignments Contact Info - 1252018.pdf"},
+        {"title":"Org Chart CEO Level","link":"http://192.168.1.206/Documents/Recruiting_Templates/Katalyst%20Employee%20Relevant%20Information/Circular_Org Chart_CEO_1252018.jpg"}
+    ],
+  "ForKatalyst":[
+        {"title":"Employment-Contract Categories","link":"http://192.168.1.206/Documents/AdditionalInfo/Employment-Contractor%20Categories.pdf"},
+        {"title":"Employee Perform Review Template","link":"http://192.168.1.206/Documents/AdditionalInfo/KT%20-%20EPA%20-%20Template.docx"},
+        {"title":"Immigration Policies","link":"http://192.168.1.206/Documents/AdditionalInfo/Immigration Policies-Guidelines.pdf"},
+        {"title":"Visa Details","link":"http://192.168.1.206/Documents/AdditionalInfo/Visa Details.pdf"},
+        {"title":"Travel and Expense Reimbursement Policies","link":"http://192.168.1.206/Documents/AdditionalInfo/KT_Travel_Expense_Policy.pdf"},
+        {"title":"Regular Full-time Temp-Intern Benefits","link":"http://192.168.1.206/Documents/AdditionalInfo/Fulltime%20W2%20Temp%20Employee_Benefits%20Summary_2016-17_KT-IS.PDF"},
+        {"title":"Regular Full-time Perm-Admin Benefits","link":"http://192.168.1.206/Documents/AdditionalInfo/Fulltime%20W2%20Admin%20%20W2%20Perm%20Employee_Benefits%20Summary_2016-17_KT-IS.PDF"},
+        {"title":"Business Card Request","link":"http://192.168.1.206/Documents/AdditionalInfo/Business Card Request.docx"},
+        {"title":"Org Chart US Operations","link":"http://192.168.1.206/Documents/Recruiting_Templates/Katalyst%20Employee%20Relevant%20Information/Circular_Org Chart_US_1252018.jpg"}],
+    "ForKSSPL":[
+        {"title":"Employee Perform Review Template","link":"http://192.168.1.206/Documents/AdditionalInfo/DSR-EPA -Template.docx"},
+        {"title":"Business Travel Policies","link":"http://192.168.1.206/Documents/AdditionalInfo/DSR - Business Travel Policy.docx"},
+        {"title":"Employment Types and Benefits Offered","link":"http://192.168.1.206/Documents/AdditionalInfo/DSR - Employment Types and Benefits offered.docx"},
+        {"title":"Org Chart India Operations","link":"http://192.168.1.206/Documents/Recruiting_Templates/Katalyst%20Employee%20Relevant%20Information/Circular_Org Chart_India_1252018.jpg"}]
+    
+}
+
+

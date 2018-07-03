@@ -18,19 +18,24 @@ const Sidebars = (props) => {
                 width='thin'>
                 <Link to="/">
                     <Menu.Item as='a'>
-                        <Icon name='home' />
                         Client Requirement
                     </Menu.Item>
                 </Link>
                 <Link to="eri">
                     <Menu.Item as='a'>
-                        ERI
+                    Employee Relevant Information
                     </Menu.Item>
                 </Link>
                 
+<<<<<<< HEAD
                 <Link to="recruitinfo">
                     <Menu.Item as='a'>
                         RI
+=======
+                <Link to="recruitinfo">                        
+                    <Menu.Item as='a' >                      
+                        Recruiting Information
+>>>>>>> bfd0f7077ef4442ad9a3961d1408bb95cc1a273f
                     </Menu.Item>
                 </Link>
             </Sidebar>
