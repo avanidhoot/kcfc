@@ -15,21 +15,21 @@ const Sidebars = (props) => {
                 // onHide={this.handleSidebarHide}
                 vertical
                 visible={true}
-                width=''>
+                width='thin'>
                 <Link to="/">
                     <Menu.Item as='a'>
                         <Icon name='home' />
                         Client Requirement
                     </Menu.Item>
                 </Link>
-                <Link to="eri">                    
+                <Link to="eri">
                     <Menu.Item as='a'>
                         ERI
                     </Menu.Item>
                 </Link>
                 
-                <Link to="recruitinfo">                        
-                    <Menu.Item as='a'>                      
+                <Link to="recruitinfo">
+                    <Menu.Item as='a'>
                         RI
                     </Menu.Item>
                 </Link>
