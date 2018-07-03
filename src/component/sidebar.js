@@ -23,13 +23,13 @@ const Sidebars = (props) => {
                 </Link>
                 <Link to="eri">                    
                     <Menu.Item as='a'>
-                        ERI
+                    Employee Relevant Information
                     </Menu.Item>
                 </Link>
                 
                 <Link to="recruitinfo">                        
-                    <Menu.Item as='a'>                      
-                        RI
+                    <Menu.Item as='a' >                      
+                        Recruiting Information
                     </Menu.Item>
                 </Link>
             </Sidebar>
