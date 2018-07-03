@@ -27,15 +27,9 @@ const Sidebars = (props) => {
                     </Menu.Item>
                 </Link>
                 
-<<<<<<< HEAD
-                <Link to="recruitinfo">
-                    <Menu.Item as='a'>
-                        RI
-=======
                 <Link to="recruitinfo">                        
                     <Menu.Item as='a' >                      
                         Recruiting Information
->>>>>>> bfd0f7077ef4442ad9a3961d1408bb95cc1a273f
                     </Menu.Item>
                 </Link>
             </Sidebar>
