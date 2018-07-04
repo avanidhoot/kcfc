@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router} from 'react-router-dom';
-import { Switch, Route } from 'react-router'
+import { Route } from 'react-router'
 import { Container } from 'semantic-ui-react';
 import { Sidebar } from '../component';
 import { ERI, RI } from '../module';

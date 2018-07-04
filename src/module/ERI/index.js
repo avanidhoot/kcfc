@@ -9,12 +9,12 @@ export default class AccordionExampleStyled extends Component {
   handleClick = (e, titleProps) => {
     const { index } = titleProps
     const { activeIndex } = this.state
-    const isActive = _.findIndex(activeIndex,(i)=>i == index);
-    if(isActive == -1) {
+    const isActive = _.findIndex(activeIndex,(i)=>i === index);
+    if(isActive === -1) {
         const activeIndexes = [...activeIndex,index]
         this.setState({activeIndex:activeIndexes});
     }else {
-        const activeIndexes = activeIndex.filter(f=>f!=index)
+        const activeIndexes = activeIndex.filter(f=>f!==index)
         this.setState({activeIndex:activeIndexes});
     }
     

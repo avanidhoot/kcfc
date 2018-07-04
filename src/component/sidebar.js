@@ -1,10 +1,8 @@
 import React from 'react';
-import {  Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import {  Menu, Segment, Sidebar } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 
-
 const Sidebars = (props) => {
-
     return (
         <Sidebar.Pushable as={Segment} >
             <Sidebar
@@ -26,7 +24,6 @@ const Sidebars = (props) => {
                     Employee Relevant Information
                     </Menu.Item>
                 </Link>
-                
                 <Link to="recruitinfo">                        
                     <Menu.Item as='a' >                      
                         Recruiting Information
@@ -39,7 +36,7 @@ const Sidebars = (props) => {
                 </Segment>
             </Sidebar.Pusher>
         </Sidebar.Pushable>
-    );
+    )
 };
 
 export default Sidebars;
