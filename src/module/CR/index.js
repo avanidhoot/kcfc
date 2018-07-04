@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Accordion, List,Icon,Segment } from 'semantic-ui-react';
+import CustomCR from './customCR';
 
 const level111Panel =[
     {   title:'Rate Conf. & Contingent Offer email (sent from the Calculator)', key:'content-1'}
@@ -35,7 +36,6 @@ const LevelContent = (
                 <Accordion.Title
                     active={true}
                     index={0} >
-                    {/*onClick={this.handleClick}*/}
                     <Icon name='dropdown' />
                    Placement
                 </Accordion.Title>
@@ -44,7 +44,6 @@ const LevelContent = (
                 <Accordion.Title
                     active={true}
                     index={0} >
-                    {/*onClick={this.handleClick}*/}
                     <Icon name='dropdown' />
                     Handled by Sales/Recruiters
                 </Accordion.Title>
@@ -216,5 +215,6 @@ export default class CR extends Component {
             <Accordion defaultActiveIndex={0} panels={[
                 { title: 'Katalyst/KSSPL', content: { content: Level1Content, key: 'content-1' } }
             ]} styled/>
+            <CustomCR/>
         </div>
     )}}
