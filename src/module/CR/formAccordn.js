@@ -1,16 +1,43 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Accordion, List,Icon,Segment } from 'semantic-ui-react';
-import CustomCR from './customCR';
 
-const level111Panel =[
-    {   title:'Rate Conf. & Contingent Offer email (sent from the Calculator)', key:'content-1'}
-]
-const Level111Content = (
+
+const Form = (props)=>{
+    const {active,index} = props
+    const isActive = props.activeIndex.includes(index)
+    return(
+        <div>
+            <Accordion styled>      
+                <Accordion.Title active={isActive} index={index} >
+                    <Icon name='dropdown'/>
+                    Forms
+                </Accordion.Title>
+                <Accordion.Content active={isActive}>
+                    <FormContent/>
+                </Accordion.Content>
+                </Accordion>            
+        </div>
+    )
+}
+export default Form;
+
+
+const FormContent = ()=> (
     <div>
-        <Accordion.Accordion panels={level111Panel} />
+        <List bulleted>
+            <List.Item>KT Placement Form</List.Item>
+            <List.Item>KSSPL Placement Form</List.Item>
+            <List.Item>N2N Placement Form</List.Item>
+        </List>
+        <Accordion.Accordion panels={[
+            {   title:'New Employee', key:'content-1'},
+            {   title:'Contractor/1099', content: {content: Contractor, key:'content-2'}},
+            {   title:'Vendor Contractor', content:{content: VendorContract,key:'content-3'}},
+        ]}/>
     </div>
 )
-const LevelContent = (
+
+const Contractor = (
     <div>
         <List bulleted>
             <List.Item>Infocubic Authorization Form</List.Item>
@@ -79,7 +106,7 @@ const LevelContent = (
         </List>
     </div>
 )
-const Level13Content = (
+const VendorContract = (
     <div>
         <Accordion>
             <Segment.Group horizontal>
@@ -152,66 +179,3 @@ const Level13Content = (
         </Accordion>
     </div>
 )
-const Level1111Content = (
-    <div>
-        <List bulleted>
-            <List.Item>KT Placement Form</List.Item>
-            <List.Item>KSSPL Placement Form</List.Item>
-            <List.Item>N2N Placement Form</List.Item>
-        </List>
-        <Accordion.Accordion panels={[
-            {   title:'New Employee', key:'content-1'},
-            {   title:'Contractor/1099', content: {content: LevelContent, key:'content-2'}},
-            {   title:'Vendor Contractor', content:{content: Level13Content,key:'content-3'}},
-        ]}/>
-    </div>
-)
-const Level11Content = (
-    <div>
-        <Accordion.Accordion panels={[
-            {   title:'Go to Katalyst Cost Margin Calculator', content: {content: Level111Content, key:'content-1'}},
-            {   title:'Go to Forms',content: {content: Level1111Content, key:'content-2'}},
-        ]}/>
-    </div>
-)
-
-const Level12Content = (
-    <div>
-        <List bulleted>
-            <List.Item>Email Template</List.Item>
-            <List.Item>Right to Represent Agreement</List.Item>
-        </List>
-        <Accordion.Accordion panels={[{title:'Go to Katalyst Cost Margin Calculator', content: {content: Level111Content, key:'content-1'}}]} />
-
-    </div>
-)
-
-const Level1Content = (
-    <div>
-        <Accordion.Accordion  defaultActiveIndex={0} panels={[
-            { title: 'Bench', content: {content: Level11Content, key:'content-1'}},
-        { title: 'External', content: {content: Level12Content, key:'content-2'}},
-        { title: 'Katalyst Cost Margin Calculator', content: {content: Level111Content, key:'content-3'}},
-        { title: 'Forms', content: {content: Level1111Content, key:'content-4'}}
-        ]} />
-    </div>
-);
-
-export default class CR extends Component {
-    state = { activeIndex: 0 };
-
-    handleClick = (e, titleProps) => {
-        const { index } = titleProps;
-        const { activeIndex } = this.state;
-        const newIndex = activeIndex === index ? -1 : index;
-        this.setState({ activeIndex: newIndex })
-    };
-
-    render() {
-        const { activeIndex } = this.state;
-        return (
-        <div>
-            <h1> Client Requirements</h1>         
-            <CustomCR/>
-        </div>
-    )}}

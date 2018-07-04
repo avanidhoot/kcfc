@@ -3,7 +3,7 @@ import { Accordion, Icon,List } from 'semantic-ui-react'
 import _ from 'lodash';
 import eriData from './eri.json';
 
-export default class AccordionExampleStyled extends Component {
+export default class ERI extends Component {
   state = { activeIndex: [0] }
 
   handleClick = (e, titleProps) => {

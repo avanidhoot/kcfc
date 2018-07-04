@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Accordion, Icon, List } from 'semantic-ui-react';
 import _ from 'lodash';
+import FormAccordn from './formAccordn';
 
 class CustomCR extends Component {
   state = {
@@ -33,8 +34,10 @@ class CustomCR extends Component {
                  Katalyst/KSSPL
             </Accordion.Title>
             <Accordion.Content active={true}>
-              <Bench handleClick={this.handleClick} activeIndex={activeIndex} index={0}/>
-              <External handleClick={this.handleClick} activeIndex={activeIndex} index={1}/>
+              <Bench handleClick={this.handleClick} activeIndex={activeIndex} index={1}/>
+              <External handleClick={this.handleClick} activeIndex={activeIndex} index={2}/>
+              <CostMarginCal activeIndex={activeIndex} index={3}/>
+              <FormAccordn  activeIndex={activeIndex} index={4}/>
             </Accordion.Content>
         </Accordion>
       </div>
@@ -52,8 +55,8 @@ const Bench = (props) =>{
           Bench
       </Accordion.Title>
       <Accordion.Content active={isActive}>
-          <GoToCal/>
-          <GoToForm/>
+          <GoToCal handleClick={props.handleClick}/>
+          <GoToForm handleClick={props.handleClick}/>
       </Accordion.Content>
     </Accordion>
   )
@@ -70,11 +73,30 @@ const External = (props) => {
       </Accordion.Title>
       <Accordion.Content active={isActive}>
           <ExternalLinks/>
-          <GoToCal/>
+          <GoToCal handleClick={props.handleClick}/>
       </Accordion.Content>
     </Accordion>
   )
 }
+
+const CostMarginCal = (props) =>{
+  const {activeIndex, index} = props;
+  const isActive = props.activeIndex.includes(index)
+  return(
+    <Accordion styled>      
+      <Accordion.Title active={isActive} index={index} >
+          <Icon name='dropdown'/>
+          Katalyst Cost Margin Calculator
+      </Accordion.Title>
+      <Accordion.Content active={isActive}>
+        <List bulleted>
+            <List.Item>Rate Conf. & Contingent Offer email (sent from the Calculator)</List.Item>         
+        </List> 
+      </Accordion.Content>
+    </Accordion>
+  )
+}
+
 const ExternalLinks =()=> (
   <div>
       <List bulleted>
@@ -87,10 +109,11 @@ const ExternalLinks =()=> (
 const GoToCal = (props) =>{
   return(
     <Accordion styled>      
-      <Accordion.Title active={true}>
+      <Accordion.Title active={true} onClick={(e,titleProps)=>props.handleClick(e,{index:3})} >
           <Icon name='caret right'/>
           Go to Katalyst Cost Margin Calculator
       </Accordion.Title>
+      
     </Accordion>
   )
 }
@@ -98,7 +121,7 @@ const GoToCal = (props) =>{
 const GoToForm = (props) =>{
   return(
     <Accordion styled>      
-      <Accordion.Title active={true}>
+      <Accordion.Title active={true} onClick={(e,titleProps)=>props.handleClick(e,{index:4})}>
           <Icon name='caret right'/>
           Go To Form
       </Accordion.Title>
