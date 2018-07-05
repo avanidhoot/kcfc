@@ -40,20 +40,24 @@ const Accord = (props) =>{
                 {props.title} 
             </Accordion.Title>
             <Accordion.Content active={props.activeIndex.includes(props.index)}>
-                <p>
-                   { props.item.map(m=>{ 
-                    return  <ul key={m.id}>
-                        <List.Item>
-                            <li>
-                                <a target="_blank" href={m.link}>
-                                    {m.title}
-                                </a>     
-                            </li>               
-                        </List.Item>
-                    </ul>
-                    })}
-                </p>
+                <CustomList item={props.item}/>
             </Accordion.Content>
         </React.Fragment>
+    )
+}
+
+const CustomList = (props)=>{
+    return(
+        props.item.map(m=>{ 
+            return  <ul key={m.id}>
+                <List.Item>
+                    <li>
+                        <a target="_blank" href={m.link}>
+                            {m.title}
+                        </a>     
+                    </li>               
+                </List.Item>
+            </ul>
+        })
     )
 }
