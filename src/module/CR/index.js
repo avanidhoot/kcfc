@@ -1,217 +1,134 @@
-import React, {Component} from 'react';
-import { Accordion, List,Icon,Segment } from 'semantic-ui-react';
-import CustomCR from './customCR';
+import React, { Component } from 'react';
+import { Accordion, Icon, List } from 'semantic-ui-react';
+import _ from 'lodash';
+import FormAccordn from './formAccordn';
 
-const level111Panel =[
-    {   title:'Rate Conf. & Contingent Offer email (sent from the Calculator)', key:'content-1'}
-]
-const Level111Content = (
-    <div>
-        <Accordion.Accordion panels={level111Panel} />
-    </div>
-)
-const LevelContent = (
-    <div>
-        <List bulleted>
-            <List.Item>Infocubic Authorization Form</List.Item>
-            <List.Item>Background Check Information Sheet</List.Item>
-            <List.Item>Independent Contractor Agreement</List.Item>
-            <List.Item>Katalyst Insurance RequirementKT Placement Form</List.Item>
-            <Accordion styled>
-                <Accordion.Title
-                    active={true}
-                    index={0} >
-                    {/*onClick={this.handleClick}*/}
-                    <Icon name='dropdown' />
-                    Katalyst receives from Client
-                </Accordion.Title>
-                <Accordion.Content active={true}>
-                    <List bulleted>
-                        <List.Item>Signed Client Agreement</List.Item>
-                        <List.Item>Signed W/O</List.Item>
-                    </List>
-                </Accordion.Content>
-            </Accordion>
-            <Accordion>
-                <Accordion.Title
-                    active={true}
-                    index={0} >
-                    <Icon name='dropdown' />
-                   Placement
-                </Accordion.Title>
-            </Accordion>
-            <Accordion>
-                <Accordion.Title
-                    active={true}
-                    index={0} >
-                    <Icon name='dropdown' />
-                    Handled by Sales/Recruiters
-                </Accordion.Title>
-                <Accordion.Content active={true}>
-                    <List bulleted>
-                        <List.Item>Thank You Letter</List.Item>
-                        <List.Item>Signed Agreement/WO</List.Item>
-                    </List>
-                </Accordion.Content>
-
-
-                <Accordion.Title
-                    active={true}
-                    index={0} >
-                    {/*onClick={this.handleClick}*/}
-                    <Icon name='dropdown' />
-                    For Katalyst
-                </Accordion.Title>
-                <Accordion.Content active={true}>
-                    <List bulleted>
-                        <List.Item>Katalyst COI</List.Item>
-                        <List.Item>Katalyst W-9</List.Item>
-                        <List.Item>Articles of Inc.</List.Item>
-                        <List.Item>Katalyst Certificate of Good Standing</List.Item>
-                        <List.Item>Idhasoft Certificate of Good Standing</List.Item>
-                        <List.Item>Sales Certificate</List.Item>
-                        <List.Item>Katalyst business license (Evanston, IL office)</List.Item>
-                        <List.Item>Katalyst business license (John's Creek, GA office)</List.Item>
-                        <List.Item>Idhasoft GA business license (John's Creek, GA office))</List.Item>
-                    </List>
-                </Accordion.Content>
-            </Accordion>
-        </List>
-    </div>
-)
-const Level13Content = (
-    <div>
-        <Accordion>
-            <Segment.Group horizontal>
-            <Segment>
-            <Accordion.Title
-                active={true}
-                index={0} >
-                {/*onClick={this.handleClick}*/}
-                <Icon name='dropdown' />
-                For Katalyst
-            </Accordion.Title>
-            <Accordion.Content active={true}>
-                <List bulleted>
-                    <List.Item>Vendor Welcome Letter</List.Item>
-                    <List.Item>Katalyst Subcontractor Agreement</List.Item>
-                </List>
-            </Accordion.Content>
-            </Segment>
-            <Segment>
-            <Accordion.Title
-                active={true}
-                index={0} >
-                {/*onClick={this.handleClick}*/}
-                <Icon name='dropdown' />
-                For KSSPL
-            </Accordion.Title>
-            <Accordion.Content active={true}>
-                <List bulleted>
-                    <List.Item>DSR Vendor Agreement and W/O</List.Item>
-                </List>
-            </Accordion.Content></Segment>
-            </Segment.Group>
-        </Accordion>
-        <Accordion>
-            <Segment.Group horizontal>
-                <Segment>
-                    <Accordion.Title
-                        active={true}
-                        index={0} >
-                        {/*onClick={this.handleClick}*/}
-                        <Icon name='dropdown' />
-                        Katalyst Requests
-                    </Accordion.Title>
-                    <Accordion.Content active={true}>
-                        <List bulleted>
-                            <List.Item>COI</List.Item>
-                            <List.Item>W-9</List.Item>
-                            <List.Item>Cert. of Good Standing</List.Item>
-                            <List.Item>BC/DS Report</List.Item>
-                        </List>
-                    </Accordion.Content>
-                </Segment>
-                <Segment>
-                    <Accordion.Title
-                        active={true}
-                        index={0} >
-                        {/*onClick={this.handleClick}*/}
-                        <Icon name='dropdown' />
-                        KSSPL Requests
-                    </Accordion.Title>
-                    <Accordion.Content active={true}>
-                        <List bulleted>
-                            <List.Item>Bank Details</List.Item>
-                            <List.Item>    PAN/TAN/Service Tax & VAT ID</List.Item>
-                            <List.Item>   COI</List.Item>
-                            <List.Item>  Shops and Establishments Lic</List.Item>
-                        </List>
-                    </Accordion.Content></Segment>
-            </Segment.Group>
-        </Accordion>
-    </div>
-)
-const Level1111Content = (
-    <div>
-        <List bulleted>
-            <List.Item>KT Placement Form</List.Item>
-            <List.Item>KSSPL Placement Form</List.Item>
-            <List.Item>N2N Placement Form</List.Item>
-        </List>
-        <Accordion.Accordion panels={[
-            {   title:'New Employee', key:'content-1'},
-            {   title:'Contractor/1099', content: {content: LevelContent, key:'content-2'}},
-            {   title:'Vendor Contractor', content:{content: Level13Content,key:'content-3'}},
-        ]}/>
-    </div>
-)
-const Level11Content = (
-    <div>
-        <Accordion.Accordion panels={[
-            {   title:'Go to Katalyst Cost Margin Calculator', content: {content: Level111Content, key:'content-1'}},
-            {   title:'Go to Forms',content: {content: Level1111Content, key:'content-2'}},
-        ]}/>
-    </div>
-)
-
-const Level12Content = (
-    <div>
-        <List bulleted>
-            <List.Item>Email Template</List.Item>
-            <List.Item>Right to Represent Agreement</List.Item>
-        </List>
-        <Accordion.Accordion panels={[{title:'Go to Katalyst Cost Margin Calculator', content: {content: Level111Content, key:'content-1'}}]} />
-
-    </div>
-)
-
-const Level1Content = (
-    <div>
-        <Accordion.Accordion  defaultActiveIndex={0} panels={[
-            { title: 'Bench', content: {content: Level11Content, key:'content-1'}},
-        { title: 'External', content: {content: Level12Content, key:'content-2'}},
-        { title: 'Katalyst Cost Margin Calculator', content: {content: Level111Content, key:'content-3'}},
-        { title: 'Forms', content: {content: Level1111Content, key:'content-4'}}
-        ]} />
-    </div>
-);
-
-export default class CR extends Component {
-    state = { activeIndex: 0 };
-
-    handleClick = (e, titleProps) => {
-        const { index } = titleProps;
-        const { activeIndex } = this.state;
-        const newIndex = activeIndex === index ? -1 : index;
-        this.setState({ activeIndex: newIndex })
+class CR extends Component {
+    state = {
+        activeIndex: []
     };
 
+    handleClick = (e, titleProps) => {
+        const { index } = titleProps
+        const { activeIndex } = this.state
+        const isActive = _.findIndex(activeIndex,(i)=>i === index);
+        if(isActive === -1) {
+            const activeIndexes = [...activeIndex,index]
+            this.setState({activeIndex:activeIndexes});
+        }else {
+            const activeIndexes = activeIndex.filter(f=>f!==index)
+            this.setState({activeIndex:activeIndexes});
+        }
+
+    }
+
     render() {
-        const { activeIndex } = this.state;
-        return (
-        <div>
-            <h1> Client Requirements</h1>         
-            <CustomCR/>
-        </div>
-    )}}
+        const {activeIndex} = this.state
+        return(
+            <div>
+                <br/>
+                <br/>
+                <Accordion  fluid styled>
+                    <Accordion.Title active={true} >
+                        <Icon name='dropdown'/>
+                        Katalyst/KSSPL
+                    </Accordion.Title>
+                    <Accordion.Content active={true}>
+                        <Bench handleClick={this.handleClick} activeIndex={activeIndex} index={1}/>
+                        <External handleClick={this.handleClick} activeIndex={activeIndex} index={2}/>
+                        <CostMarginCal activeIndex={activeIndex} index={3}/>
+                        <FormAccordn  activeIndex={activeIndex} index={4}/>
+                    </Accordion.Content>
+                </Accordion>
+            </div>
+        )
+    }
+}
+
+const Bench = (props) =>{
+    const { index } = props;
+    const isActive = props.activeIndex.includes(index)
+    return(
+        <Accordion styled>
+            <Accordion.Title active={isActive} index={index} onClick={(e,titleProps)=>props.handleClick(e,titleProps)}>
+                <Icon name='dropdown'/>
+                Bench
+            </Accordion.Title>
+            <Accordion.Content active={isActive}>
+                <GoToCal handleClick={props.handleClick}/>
+                <GoToForm handleClick={props.handleClick}/>
+            </Accordion.Content>
+        </Accordion>
+    )
+}
+
+const External = (props) => {
+    const { index } = props;
+    const isActive = props.activeIndex.includes(index)
+    return(
+        <Accordion styled>
+            <Accordion.Title active={isActive} index={index} onClick={(e,titleProps)=>props.handleClick(e,titleProps)}>
+                <Icon name='dropdown'/>
+                External
+            </Accordion.Title>
+            <Accordion.Content active={isActive}>
+                <ExternalLinks/>
+                <GoToCal handleClick={props.handleClick}/>
+                <GoToForm handleClick={props.handleClick}/>
+            </Accordion.Content>
+        </Accordion>
+    )
+}
+
+const CostMarginCal = (props) =>{
+    const { index} = props;
+    const isActive = props.activeIndex.includes(index)
+    return(
+        <Accordion styled>
+            <Accordion.Title active={isActive} index={index} >
+                <Icon name='dropdown'/>
+                Katalyst Cost Margin Calculator
+            </Accordion.Title>
+            <Accordion.Content active={isActive}>
+                <List bulleted>
+                    <List.Item content ={<a href='http://192.168.1.206:5577/'>Katalyst Cost Margin Calculator</a>}/>
+                    <List.Item>Rate Conf. & Contingent Offer email (sent from the Calculator)</List.Item>
+                </List>
+            </Accordion.Content>
+        </Accordion>
+    )
+}
+
+const ExternalLinks =()=> (
+    <div>
+        <List bulleted>
+            <List.Item content={<a href='http://192.168.1.206/Documents/Recruiting_Templates/Katalyst%20Representation%20Agreement/KT-DSR_Client Representation Agreement_Email (Email Template).doc'>Email Template</a>}/>
+            <List.Item content={<a href="http://192.168.1.206/Documents/Recruiting_Templates/Katalyst%20Representation%20Agreement/KT-DSR-Right to Represent Agreement.docx">Right to Represent Agreement</a>}/>
+        </List>
+
+    </div>
+)
+const GoToCal = (props) =>{
+    return(
+        <Accordion styled>
+            <Accordion.Title active={true} onClick={(e,titleProps)=>props.handleClick(e,{index:3})} >
+                <Icon name='caret right'/>
+                Go to Katalyst Cost Margin Calculator
+            </Accordion.Title>
+
+        </Accordion>
+    )
+}
+
+const GoToForm = (props) =>{
+    return(
+        <Accordion styled>
+            <Accordion.Title active={true} onClick={(e,titleProps)=>props.handleClick(e,{index:4})}>
+                <Icon name='caret right'/>
+                Go To Form
+            </Accordion.Title>
+        </Accordion>
+    )
+}
+
+export default CR;

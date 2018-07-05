@@ -15,17 +15,17 @@ const Sidebars = (props) => {
                 visible={true}
                 width='thin'>
                 <Link to="/">
-                    <Menu.Item as='a'>
+                    <Menu.Item >
                         Client Requirement
                     </Menu.Item>
                 </Link>
                 <Link to="eri">
-                    <Menu.Item as='a'>
+                    <Menu.Item >
                     Employee Relevant Information
                     </Menu.Item>
                 </Link>
                 <Link to="recruitinfo">                        
-                    <Menu.Item as='a' >                      
+                    <Menu.Item >
                         Recruiting Information
                     </Menu.Item>
                 </Link>
